@@ -1,0 +1,12 @@
+<div class="container" style-="margin-top:30px; color:blue">
+  <p>title : <%=@post.title %></p>
+  <p>content : <%=@post.content %></p>
+  <p>write time : <%=@post.created_at %></p>
+
+  <a href="/post/index">board</a>
+  <a href="/post/show/<%=@post.id %>/edit">edit</a>
+
+  <form action ="/post/show/<%=@post.id %>" method="post">
+    <button type="submit" class="btn btn-link">delete</button>
+  </form>
+</div>
